@@ -6,25 +6,52 @@
       <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link> 
 </head>
 <body>
-<p>UI version number: 2018.03.09</p>
+<p>UI version number: 2018.03.09.1</p>
   <!-- creating cube -->
 
   <x3d width="600" height="400">
     <scene>
+        <transform translation="7 0 0">
         <shape>
+          
             <appearance>
             <material diffuseColor="1 0 0" transparency="0.5" />
             </appearance>
             <box></box>
           </shape>
-          <transform translation="-3 0 0">
-          <shape>
-            <appearance>
-            <material diffuseColor="0 1 0" transparency="0.5" />
-            </appearance>
-            <box></box>
-          </shape>
+        </transform>
+          <transform translation="3 0 0">
+            <shape>
+              <appearance>
+                <material diffuseColor="0 1 0" transparency="0.5" />
+              </appearance>
+                <sphere></sphere>
+            </shape>
           </transform>
+               <transform translation="0 0 0">
+            <shape>
+              <appearance>
+                <material diffuseColor="0 0 1" transparency="0.5" />
+              </appearance>
+                <cone></cone>
+            </shape>
+          </transform>
+          <transform translation="-3 0 0">
+              <shape>
+                <appearance>
+                  <material diffuseColor="0 0 1" transparency="0.5" />
+                </appearance>
+                  <cylinder></cylinder>
+              </shape>
+            </transform>
+            <transform translation="-7 0 0">
+                <shape>
+                  <appearance>
+                    <material diffuseColor="0 1 0" transparency="1" />
+                  </appearance>
+                   <text string="Alex"></text>
+                </shape>
+              </transform>
     </scene>
   </x3d>
 </body>
