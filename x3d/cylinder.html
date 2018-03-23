@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
+<link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'></link> 
+</head>
+
+<body>
+
+<p>UI version number: 2018.03.23.0</p>
+<p id = "id_business_level"></p>
+
+<X3D width = "600" height = "400">
+
+<Scene>
+	<Transform DEF = "cylinder" id = "id_transform">
+		<Shape>
+			<Appearance>
+				<Material diffuseColor = "1 0 0" transparency = "0.5"/>
+			</Appearance>
+			<Cylinder>
+            </Cylinder>
+		</Shape>
+	</Transform>
+
+<TimeSensor DEF = "timer" cycleInterval = '4' loop = "true"></TimeSensor>
+<OrientationInterpolator DEF = "path" key = "0 0.5 1" keyValue = "0 0 0 0, 0 0 1 3.14, 0 0 6.28"></OrientationInterpolator>
+<Route fromNode="timer" fromField = "fraction_changed" toNode = "path" toField = "set_fraction"></Route>
+<Route fromNode = "path" fromField = "value_changed" toNode = "cylinder" toField = "set_rotation"></Route>
+
+</Scene>
+</X3D>
+
+</body>
+</html>
